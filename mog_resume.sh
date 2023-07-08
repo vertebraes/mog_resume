@@ -32,14 +32,13 @@ service_name=`curl -s --request GET \
 
 #停止服务
 
-curl --request GET \
+curl -s --request GET \
      --url https://api.mogenius.com/namespace-service/stop-service/$service_name \
      --header 'accept: text/plain' \
      --header "authorization: Bearer $accessToken" \
      --header "namespace-id: $namespace_id"
-curl --request GET \
+curl -s --request GET \
      --url https://api.mogenius.com/namespace-service/start-service/$service_name \
      --header 'accept: text/plain' \
      --header "authorization: Bearer $accessToken" \
      --header "namespace-id: $namespace_id"
-
