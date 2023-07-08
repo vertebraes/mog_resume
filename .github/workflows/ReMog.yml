@@ -2,6 +2,10 @@ name: ReMog
 on:
   workflow_dispatch:
 
+env:
+  email_name: ${{ secrets.email_name }}
+  password_passwd: ${{ secrets.password_passwd }}
+  
 jobs:
   build:
     runs-on: ubuntu-latest
