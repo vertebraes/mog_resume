@@ -1,6 +1,9 @@
 name: ReMog
 on:
   workflow_dispatch:
+  push:
+  schedule:
+    - cron: '0 */3 * * *'
 
 env:
   email_name: ${{ secrets.email_name }}
